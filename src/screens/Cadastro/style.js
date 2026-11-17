@@ -57,4 +57,3 @@ export const TextNavigation = styled.Text`
     color: #375EE7;
     text-decoration: underline
 `
-

@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const BoxProducts = styled.View`
+export const BoxProducts = styled.TouchableOpacity`
     border: 1px solid #D4D4D4;
     border-radius: 7px;
     width: 175px;

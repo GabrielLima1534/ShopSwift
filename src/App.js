@@ -1,17 +1,19 @@
-import { Button, Image, Pressable, Text, TextInput, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context'
-import Illustration from '../assets/android-icon-foreground.png'
-import { Card } from './components/Card';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Login } from './screens/Login';
 import { Cadastro } from './screens/Cadastro';
 import { Home } from './screens/Home';
 
+const Stack = createNativeStackNavigator();
+
 export default function App() {
   return (
-    <SafeAreaView>
-      {/* <Login/>      */}
-      {/* <Cadastro/> */}
-      <Home/>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Cadastro" component={Cadastro} />
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
